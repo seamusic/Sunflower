@@ -20,6 +20,16 @@ namespace Sunflower.Demo.Core.Models.Security
         [StringLength(20)]
         public string Name { get; set; }
 
+        [Required]
+        [StringLength(50)]
+        public string ControlName { get; set; }
+
+        [StringLength(100)]
+        public string ActionName { get; set; }
+
+        [StringLength(50)]
+        public string Permission { get; set; }
+
         [StringLength(100)]
         public string Description { get; set; }
     }

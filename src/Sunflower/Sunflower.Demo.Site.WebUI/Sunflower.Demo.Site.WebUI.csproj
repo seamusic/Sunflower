@@ -39,6 +39,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -110,8 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BasePublicController.cs" />
-    <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -165,6 +170,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -191,9 +197,17 @@
       <Project>{a705fdb1-ad10-415e-92a4-232fb996967e}</Project>
       <Name>Sunflower.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sunflower.Data\Sunflower.Data.csproj">
+      <Project>{41d28229-0265-42ef-8097-0cc81b3df983}</Project>
+      <Name>Sunflower.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sunflower.Demo.Core.Data\Sunflower.Demo.Core.Data.csproj">
       <Project>{4AA0A921-D147-4435-8613-38F4241AA9D3}</Project>
       <Name>Sunflower.Demo.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunflower.Demo.Core.Models\Sunflower.Demo.Core.Models.csproj">
+      <Project>{B4759313-26C8-499B-AD4C-5C574332CC3D}</Project>
+      <Name>Sunflower.Demo.Core.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sunflower.Demo.Core\Sunflower.Demo.Core.csproj">
       <Project>{5998AD20-E731-40FE-A155-53531F45BC4D}</Project>
