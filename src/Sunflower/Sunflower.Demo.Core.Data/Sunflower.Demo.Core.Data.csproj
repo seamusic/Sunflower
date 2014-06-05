@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AA0A921-D147-4435-8613-38F4241AA9D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sunflower.Demo.Core.Data</RootNamespace>
+    <AssemblyName>Sunflower.Demo.Core.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurations\Account\LoginLogConfiguration.cs" />
+    <Compile Include="Configurations\Account\LoginLogConfiguration.generated.cs" />
+    <Compile Include="Configurations\Account\MemberAddressConfiguration.cs" />
+    <Compile Include="Configurations\Account\MemberConfiguration.generated.cs" />
+    <Compile Include="Configurations\Account\MemberExtendConfiguration.cs" />
+    <Compile Include="Configurations\Account\MemberExtendConfiguration.generated.cs" />
+    <Compile Include="Configurations\Security\RoleConfiguration.cs" />
+    <Compile Include="Configurations\Security\RoleConfiguration.generated.cs" />
+    <Compile Include="Configurations\Systems\LogInfoConfiguration.generated.cs" />
+    <Compile Include="Initialize\DatabaseInitializer.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Account\ILoginLogRepository.generated.cs" />
+    <Compile Include="Repositories\Account\IMemberExtendRepository.generated.cs" />
+    <Compile Include="Repositories\Account\IMemberRepository.generated.cs" />
+    <Compile Include="Repositories\Account\Impl\LoginLogRepository.generated.cs" />
+    <Compile Include="Repositories\Account\Impl\MemberExtendRepository.generated.cs" />
+    <Compile Include="Repositories\Account\Impl\MemberRepository.generated.cs" />
+    <Compile Include="Repositories\Security\Impl\RoleRepository.generated.cs" />
+    <Compile Include="Repositories\Security\IRoleRepository.generated.cs" />
+    <Compile Include="Repositories\Systems\ILogInfoRepository.generated.cs" />
+    <Compile Include="Repositories\Systems\Impl\LogInfoRepository.generated.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sunflower.Core\Sunflower.Core.csproj">
+      <Project>{a705fdb1-ad10-415e-92a4-232fb996967e}</Project>
+      <Name>Sunflower.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunflower.Data\Sunflower.Data.csproj">
+      <Project>{41D28229-0265-42EF-8097-0CC81B3DF983}</Project>
+      <Name>Sunflower.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunflower.Demo.Core.Models\Sunflower.Demo.Core.Models.csproj">
+      <Project>{b4759313-26c8-499b-ad4c-5c574332cc3d}</Project>
+      <Name>Sunflower.Demo.Core.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="T4\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
