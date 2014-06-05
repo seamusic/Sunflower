@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sunflower.Demo.WebUI</RootNamespace>
-    <AssemblyName>Sunflower.Demo.WebUI</AssemblyName>
+    <RootNamespace>Sunflower.Demo.Site.WebUI</RootNamespace>
+    <AssemblyName>Sunflower.Demo.Site.WebUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -41,6 +41,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
@@ -108,6 +109,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BasePublicController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -188,6 +190,22 @@
     <ProjectReference Include="..\Sunflower.Core\Sunflower.Core.csproj">
       <Project>{a705fdb1-ad10-415e-92a4-232fb996967e}</Project>
       <Name>Sunflower.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunflower.Demo.Core.Data\Sunflower.Demo.Core.Data.csproj">
+      <Project>{4AA0A921-D147-4435-8613-38F4241AA9D3}</Project>
+      <Name>Sunflower.Demo.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunflower.Demo.Core\Sunflower.Demo.Core.csproj">
+      <Project>{5998AD20-E731-40FE-A155-53531F45BC4D}</Project>
+      <Name>Sunflower.Demo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunflower.Demo.Site.Models\Sunflower.Demo.Site.Models.csproj">
+      <Project>{E83F5104-38B0-41D4-8DC8-CE5AB9982446}</Project>
+      <Name>Sunflower.Demo.Site.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sunflower.Demo.Site\Sunflower.Demo.Site.csproj">
+      <Project>{15B66E03-7C3C-46E0-84D1-4BEEB38B8091}</Project>
+      <Name>Sunflower.Demo.Site</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

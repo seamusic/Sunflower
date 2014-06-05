@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Sunflower.Demo.WebUI
+namespace Sunflower.Demo.Site.WebUI
 {
     public class FilterConfig
     {

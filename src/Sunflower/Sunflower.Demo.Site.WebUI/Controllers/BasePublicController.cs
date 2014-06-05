@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Sunflower.Core.Infrastructure;
 
-namespace Sunflower.Demo.WebUI.Controllers
+namespace Sunflower.Demo.Site.WebUI.Controllers
 {
     public abstract partial class BasePublicController : Controller
     {

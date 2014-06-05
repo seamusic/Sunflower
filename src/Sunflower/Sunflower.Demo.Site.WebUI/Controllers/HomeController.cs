@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Sunflower.Demo.WebUI.Controllers
+namespace Sunflower.Demo.Site.WebUI.Controllers
 {
     public class HomeController : BasePublicController
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace Sunflower.Demo.WebUI
+namespace Sunflower.Demo.Site.WebUI
 {
     public static class WebApiConfig
     {

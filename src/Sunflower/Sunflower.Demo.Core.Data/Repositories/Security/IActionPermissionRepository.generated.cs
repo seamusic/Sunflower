@@ -16,8 +16,8 @@ using Sunflower.Demo.Core.Models.Security;
 namespace Sunflower.Demo.Core.Data.Repositories.Security
 {
 	/// <summary>
-    ///   仓储操作层接口——角色信息
+    ///   仓储操作层接口——动作权限
     /// </summary>
-    public partial interface IRoleRepository : IRepository<Role, Guid>
+    public partial interface IActionPermissionRepository : IRepository<ActionPermission, Guid>
     { }
 }

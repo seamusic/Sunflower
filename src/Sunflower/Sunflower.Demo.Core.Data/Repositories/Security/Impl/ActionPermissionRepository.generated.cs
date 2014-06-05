@@ -8,16 +8,19 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel.Composition;
+using System.Linq;
 
 using Sunflower.Data;
 using Sunflower.Demo.Core.Models.Security;
 
 
-namespace Sunflower.Demo.Core.Data.Repositories.Security
+namespace Sunflower.Demo.Core.Data.Repositories.Security.Impl
 {
 	/// <summary>
-    ///   仓储操作层接口——角色信息
+    ///   仓储操作层实现——动作权限
     /// </summary>
-    public partial interface IRoleRepository : IRepository<Role, Guid>
+    [Export(typeof(IActionPermissionRepository))]
+    public partial class ActionPermissionRepository : EFRepositoryBase<ActionPermission, Guid>, IActionPermissionRepository
     { }
 }

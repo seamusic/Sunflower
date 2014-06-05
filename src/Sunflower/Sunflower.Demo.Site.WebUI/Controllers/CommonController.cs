@@ -8,7 +8,7 @@ using System.Web.Mvc;
 using Sunflower.Core;
 using Sunflower.Core.Caching;
 
-namespace Sunflower.Demo.WebUI.Controllers
+namespace Sunflower.Demo.Site.WebUI.Controllers
 {
     public partial class CommonController : BasePublicController
     {

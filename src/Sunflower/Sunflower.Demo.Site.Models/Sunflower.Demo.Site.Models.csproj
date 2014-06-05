@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4759313-26C8-499B-AD4C-5C574332CC3D}</ProjectGuid>
+    <ProjectGuid>{E83F5104-38B0-41D4-8DC8-CE5AB9982446}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sunflower.Demo.Core.Models</RootNamespace>
-    <AssemblyName>Sunflower.Demo.Core.Models</AssemblyName>
+    <RootNamespace>Sunflower.Demo.Site.Models</RootNamespace>
+    <AssemblyName>Sunflower.Demo.Site.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,23 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\LoginInfo.cs" />
-    <Compile Include="Account\LoginLog.cs" />
-    <Compile Include="Account\Member.cs" />
-    <Compile Include="Account\MemberAddress.cs" />
-    <Compile Include="Account\MemberExtend.cs" />
+    <Compile Include="LoginModel.cs" />
+    <Compile Include="MemberView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Security\ActionPermission.cs" />
-    <Compile Include="Security\Role.cs" />
-    <Compile Include="Security\RoleType.cs" />
-    <Compile Include="Systems\LogInfo.cs" />
-    <Compile Include="Systems\LogType.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sunflower.Core\Sunflower.Core.csproj">
-      <Project>{A705FDB1-AD10-415E-92A4-232FB996967E}</Project>
-      <Name>Sunflower.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

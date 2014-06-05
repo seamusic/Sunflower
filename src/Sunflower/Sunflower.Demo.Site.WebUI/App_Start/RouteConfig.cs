@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Sunflower.Demo.WebUI
+namespace Sunflower.Demo.Site.WebUI
 {
     public class RouteConfig
     {

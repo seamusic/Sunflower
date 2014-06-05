@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Sunflower.Demo.Core.Data.Initialize;
+using Sunflower.Demo.Site.Helper.Ioc;
 
-namespace Sunflower.Demo.WebUI
+namespace Sunflower.Demo.Site.WebUI
 {
     // 注意: 有关启用 IIS6 或 IIS7 经典模式的说明，
     // 请访问 http://go.microsoft.com/?LinkId=9394801
@@ -19,6 +22,13 @@ namespace Sunflower.Demo.WebUI
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            //设置MEF依赖注入容器
+            DirectoryCatalog catalog = new DirectoryCatalog(AppDomain.CurrentDomain.SetupInformation.PrivateBinPath);
+            MefDependencySolver solver = new MefDependencySolver(catalog);
+            DependencyResolver.SetResolver(solver);
+
+            DatabaseInitializer.Initialize();
         }
     }
 }
